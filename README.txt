@@ -1,30 +1,19 @@
-Dimension by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# 🌐 Rene Oluoch — Personal Portfolio Website
 
+Welcome to my personal portfolio website! This site highlights my technical background, academic projects, and practical skills in network and cloud security. You can explore the live version here: [https://reneoluoch.github.io](https://reneoluoch.github.io).
 
-This is Dimension, a fun little one-pager with modal-ized (is that a word?) "pages"
-and a cool depth effect (click on a menu item to see what I mean). Simple, fully
-responsive, and kitted out with all the usual pre-styled elements you'd expect.
-Hope you dig it :)
+---
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+## 🚀 Overview
 
-(* = not included)
+This website serves as a professional showcase of who I am as a budding Network and Cloud Security Engineer. It presents my qualifications, hands-on lab experiences, and personal branding in a clean, responsive design.
 
-AJ
-aj@lkn.io | @ajlkn
+---
 
+## 🎯 Repository Setup & Deployment
 
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+### 1. Repository Creation & Local Development  
+I created the public repository `Reneoluoch.github.io` to host the site via GitHub Pages. After initializing it with a README, I cloned it locally with:
+```bash
+git clone https://github.com/Reneoluoch/Reneoluoch.github.io.git
+cd Reneoluoch.github.io
