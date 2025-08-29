@@ -335,7 +335,20 @@ This lab deepened my understanding of web protocols and practical skills in cons
 
         <!-- Lab Challenges -->
         <article id="cloudsecuritylabchallenges">
-        
+        <section><h3>🔹 Project: Key Vault – Implementing Secure Data with Always Encrypted</h3> <p><strong>Summary</strong></p> <p> This lab focused on <strong>securing sensitive data</strong> in an <strong>Azure SQL Database</strong> using <strong>Always Encrypted</strong> 
+          with encryption keys stored in <strong>Azure Key Vault</strong>.
+          I deployed infrastructure through an ARM template, configured Azure Key Vault with keys and secrets, registered a client application in Microsoft Entra ID, and granted it access to Key Vault.
+          I then built and tested a data-driven application that performed encryption and decryption operations against SQL database columns, demonstrating secure integration of key management with database security. 
+        </p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>Deploying Azure resources using ARM templates and resolving deployment errors</li> <li>Creating and configuring <strong>Azure Key Vault</strong> with keys and secrets</li> <li>Registering and securing client applications in
+          <strong>Microsoft Entra ID</strong></li> <li>Assigning Key Vault access policies for applications</li>
+          <li>Implementing <strong>Always Encrypted</strong> in SQL Server Management Studio (SSMS)</li> <li>Encrypting sensitive database columns (SSN, BirthDate) with deterministic and randomized encryption</li> <li>Building and running a C# .NET application integrated with Key Vault for secure data operations</li> </ul> 
+          <p><strong>Practical Experience:</strong></p> <ul> <li>Deployed infrastructure via ARM templates and resolved errors with VM image, size, and SQL configurations</li> <li>Created Azure Key Vault, stored cryptographic keys and secrets, and configured access policies</li>
+            <li>Registered an application in Entra ID and generated credentials for secure authentication</li>
+            <li>Configured SQL database connectivity, firewall rules, and Always Encrypted column settings</li> <li>Developed and ran a .NET console app to insert and query encrypted SQL data using Key Vault-managed keys</li>
+            <li>Verified proper encryption/decryption in SSMS and application runtime</li> </ul> <p><strong>Outcome:</strong></p> 
+          <p> Through this lab, I gained practical skills in <strong>cloud-based key management, database security, and application integration</strong>. I demonstrated how Azure Key Vault can secure encryption keys, enforce access policies, and support Always Encrypted for sensitive database columns. 
+            The hands-on experience showed how client applications securely interact with encrypted databases while ensuring that keys remain protected within Key Vault. This knowledge is essential for <strong>data security, compliance, and safeguarding confidentiality</strong> 
+            in cloud environments. </p> <p>👉 <a href="assets/pdf/lab/key-vault-always-encrypted.pdf" target="_blank" rel="noopener">Download Full Lab Report (PDF)</a></p> </section>
 
         <!-- Contact -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
