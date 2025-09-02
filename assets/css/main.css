@@ -1662,14 +1662,7 @@ input, select, textarea {
 
 .pdf-viewer {
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; /* Make iframe fill screen */
   border: none;
   display: block;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden; /* Prevent double scrollbars */
 }
