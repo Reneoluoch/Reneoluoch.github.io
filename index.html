@@ -86,7 +86,7 @@
       <h3>Education</h3>
       <ul>
         <li><strong>Cyber Shujaa Program – Network and Cloud Security</strong><br>
-          May 2025 – Present (Ongoing)<br>
+          May 2025 – August 2025<br>
           Focus: Secure cloud computing, VPNs, firewalls, access control, disaster recovery
         </li>
         <li><strong>Bachelor of Technology in Communication and Computer Networks</strong><br>
@@ -352,6 +352,447 @@ This lab deepened my understanding of web protocols and practical skills in cons
 
         <!-- Contact -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+          <section>
+  <h3>🔹 Project: Azure Monitor & Microsoft Defender for Cloud</h3> 
+
+  <p><strong>Summary</strong></p> 
+  <p>
+    These labs focused on configuring <strong>Azure Monitor</strong> and <strong>Microsoft Defender for Cloud</strong> 
+    to improve observability and security of Azure workloads. I deployed a virtual machine with encryption enabled, 
+    created a Log Analytics workspace, and configured a data collection rule for telemetry. 
+    Additionally, I enabled <strong>Defender for Servers Plan 2</strong> to implement advanced threat protection 
+    and proactive security features across the environment.
+  </p> 
+
+  <p><strong>Key Concepts Covered:</strong></p> 
+  <ul> 
+    <li>Deploying secure <strong>Azure Virtual Machines</strong> with Encryption at Host</li> 
+    <li>Creating and configuring <strong>Log Analytics Workspace</strong> for centralized monitoring</li> 
+    <li>Setting up <strong>Azure Storage Accounts</strong> for telemetry and diagnostics</li> 
+    <li>Implementing <strong>Data Collection Rules (DCRs)</strong> for performance monitoring</li> 
+    <li>Enabling and configuring <strong>Microsoft Defender for Cloud</strong> security plans</li> 
+    <li>Using advanced security features like JIT VM access, file integrity monitoring, and adaptive application controls</li> 
+  </ul> 
+
+  <p><strong>Practical Experience:</strong></p> 
+  <ul> 
+    <li>Deployed a VM and resource group via Cloud Shell and PowerShell</li> 
+    <li>Created and linked a Log Analytics Workspace to collect logs and metrics</li> 
+    <li>Configured performance counters (CPU, Memory, Disk, Network) with sampling via DCR</li> 
+    <li>Provisioned a storage account for diagnostics and telemetry data</li> 
+    <li>Enabled Defender for Servers Plan 2 to strengthen workload protection</li> 
+    <li>Explored advanced features including Defender for Endpoint integration and automatic agent provisioning</li> 
+  </ul> 
+
+  <p><strong>Outcome:</strong></p> 
+  <p>
+    Through these labs, I gained hands-on skills in <strong>Azure monitoring, security hardening, and threat protection</strong>. 
+    I demonstrated how to centralize performance and log data using Azure Monitor, and how 
+    <strong>Microsoft Defender for Cloud</strong> enhances protection through advanced security controls. 
+    This experience highlighted the importance of combining monitoring and proactive defense 
+    to safeguard Azure workloads against evolving threats.
+  </p> 
+
+  <p>👉 <a href="assets/pdf/lab/azure-monitor-defender.pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p> 
+</section>
+
+
+          <section>
+  <h3>🔹 Project: Enabling Just-In-Time (JIT) VM Access</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    In this lab, I focused on strengthening <strong>privileged access management</strong> for Azure virtual machines 
+    by implementing <strong>Just-In-Time (JIT) access</strong>. JIT ensures that management ports such as RDP (3389) 
+    remain closed by default and only open temporarily when explicitly requested by an administrator. 
+    This reduces exposure to brute-force attacks and unauthorized logins.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Accessed the <strong>Azure Virtual Machines blade</strong> and selected <em>myVM</em>, previously deployed in Lab 08.</li>
+    <li>Navigated to <strong>Configuration → Just-In-Time VM Access</strong> and enabled JIT via <strong>Microsoft Defender for Cloud</strong>.</li>
+    <li>Reviewed and configured the <strong>default JIT policy</strong>, which protected TCP port 3389 (RDP) with a maximum 3-hour session.</li>
+    <li>Learned how to <strong>customize JIT rules</strong> by adding new ports or adjusting IP restrictions.</li>
+    <li>Saved the JIT configuration, ensuring inbound traffic was now locked down by default.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>Tested the configuration by navigating to <strong>Connect → Request Access</strong> on the VM.</li>
+    <li>Verified that JIT required explicit access requests, which temporarily opened RDP for the administrator’s IP address.</li>
+    <li>Confirmed that ports closed automatically once the access window expired.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    JIT access was successfully implemented and tested. This security measure <strong>reduced the VM’s attack surface</strong> 
+    while ensuring administrators could still securely perform maintenance tasks when required. 
+    The exercise demonstrated best practices for <strong>time-bound privileged access</strong> in cloud environments.
+  </p>
+</section>
+
+<section>
+  <h3>🔹 Project: Microsoft Sentinel – Threat Detection & Automated Response</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    This lab involved implementing <strong>Microsoft Sentinel</strong>, Azure’s <strong>SIEM (Security Information and Event Management)</strong> 
+    and <strong>SOAR (Security Orchestration, Automation, and Response)</strong> platform. The goal was to 
+    <strong>onboard security data, create detection rules, and automate incident responses</strong>.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Onboarded <strong>Microsoft Sentinel</strong> into a <strong>Log Analytics Workspace</strong> created in a previous lab.</li>
+    <li>Configured <strong>Azure Activity data connector</strong> via the Content Hub, ensuring activity logs streamed into Sentinel.</li>
+    <li>Created an <strong>analytics rule</strong> to detect suspicious behavior, such as an unusual number of resource deployments.</li>
+    <li>Built a <strong>playbook (Logic App)</strong> named <em>Change-Incident-Severity</em> using a custom JSON template to automate response actions.</li>
+    <li>Configured <strong>custom scheduled query rules</strong> with KQL to monitor for deletion of JIT access policies.</li>
+    <li>Linked the custom rule with the playbook to automatically escalate incidents when triggered.</li>
+    <li>Simulated a security event by deleting the JIT policy on <em>myVM</em> and observed Sentinel generating an incident in real time.</li>
+    <li>Reviewed incident logs and confirmed the automated playbook executed successfully.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>Incident creation was validated in the <strong>Sentinel Incidents dashboard</strong>.</li>
+    <li>Playbook execution logs confirmed automation steps (severity escalation and notifications).</li>
+    <li>Observed real-time alerts from <strong>Azure Activity logs</strong> integrated with Sentinel.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    I successfully demonstrated how Microsoft Sentinel can <strong>detect, investigate, and respond to threats</strong>. 
+    By combining analytics rules, KQL queries, and automated playbooks, Sentinel was able to take <strong>proactive actions</strong> 
+    against security events such as the deletion of JIT policies. This lab provided practical experience in <strong>cloud SIEM/SOAR operations</strong>, 
+    showcasing Sentinel’s role in improving visibility, reducing response times, and automating security workflows.
+  </p>
+</section>
+
+<p>👉 <a href="assets/pdf/lab/Enable Just-In Time Access in VMs, Microsoft Sentinel(part A).pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p>
+
+
+          <section>
+  <h3>🔹 Project: Enabling Just-In-Time (JIT) VM Access</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    In this lab, I focused on strengthening <strong>privileged access management</strong> for Azure virtual machines 
+    by implementing <strong>Just-In-Time (JIT) access</strong>. JIT ensures that management ports such as RDP (3389) 
+    remain closed by default and only open temporarily when explicitly requested by an administrator. 
+    This reduces exposure to brute-force attacks and unauthorized logins.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Accessed the <strong>Azure Virtual Machines blade</strong> and selected <em>myVM</em>, previously deployed in Lab 08.</li>
+    <li>Navigated to <strong>Configuration → Just-In-Time VM Access</strong> and enabled JIT via <strong>Microsoft Defender for Cloud</strong>.</li>
+    <li>Reviewed and configured the <strong>default JIT policy</strong>, which protected TCP port 3389 (RDP) with a maximum 3-hour session.</li>
+    <li>Learned how to <strong>customize JIT rules</strong> by adding new ports or adjusting IP restrictions.</li>
+    <li>Saved the JIT configuration, ensuring inbound traffic was now locked down by default.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>Tested the configuration by navigating to <strong>Connect → Request Access</strong> on the VM.</li>
+    <li>Verified that JIT required explicit access requests, which temporarily opened RDP for the administrator’s IP address.</li>
+    <li>Confirmed that ports closed automatically once the access window expired.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    JIT access was successfully implemented and tested. This security measure <strong>reduced the VM’s attack surface</strong> 
+    while ensuring administrators could still securely perform maintenance tasks when required. 
+    The exercise demonstrated best practices for <strong>time-bound privileged access</strong> in cloud environments.
+  </p>
+</section>
+
+<section>
+  <h3>🔹 Project: Microsoft Sentinel – Threat Detection & Automated Response</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    This lab involved implementing <strong>Microsoft Sentinel</strong>, Azure’s <strong>SIEM (Security Information and Event Management)</strong> 
+    and <strong>SOAR (Security Orchestration, Automation, and Response)</strong> platform. The goal was to 
+    <strong>onboard security data, create detection rules, and automate incident responses</strong>.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Onboarded <strong>Microsoft Sentinel</strong> into a <strong>Log Analytics Workspace</strong> created in a previous lab.</li>
+    <li>Configured <strong>Azure Activity data connector</strong> via the Content Hub, ensuring activity logs streamed into Sentinel.</li>
+    <li>Created an <strong>analytics rule</strong> to detect suspicious behavior, such as an unusual number of resource deployments.</li>
+    <li>Built a <strong>playbook (Logic App)</strong> named <em>Change-Incident-Severity</em> using a custom JSON template to automate response actions.</li>
+    <li>Configured <strong>custom scheduled query rules</strong> with KQL to monitor for deletion of JIT access policies.</li>
+    <li>Linked the custom rule with the playbook to automatically escalate incidents when triggered.</li>
+    <li>Simulated a security event by deleting the JIT policy on <em>myVM</em> and observed Sentinel generating an incident in real time.</li>
+    <li>Reviewed incident logs and confirmed the automated playbook executed successfully.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>Incident creation was validated in the <strong>Sentinel Incidents dashboard</strong>.</li>
+    <li>Playbook execution logs confirmed automation steps (severity escalation and notifications).</li>
+    <li>Observed real-time alerts from <strong>Azure Activity logs</strong> integrated with Sentinel.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    I successfully demonstrated how Microsoft Sentinel can <strong>detect, investigate, and respond to threats</strong>. 
+    By combining analytics rules, KQL queries, and automated playbooks, Sentinel was able to take <strong>proactive actions</strong> 
+    against security events such as the deletion of JIT policies. This lab provided practical experience in <strong>cloud SIEM/SOAR operations</strong>, 
+    showcasing Sentinel’s role in improving visibility, reducing response times, and automating security workflows.
+  </p>
+</section>
+
+ <p>👉 <a href="assets/pdf/lab/Enable Just-In Time Access in VMs, Microsoft Sentinel( part B).pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p>
+
+
+          <section>
+  <h2>CloudGoat IAM Privilege Escalation by Rollback Scenario</h2>
+  <p><strong>Author:</strong> Rene Oluoch<br>
+  <strong>Reg No:</strong> CS-CNS09-25030<br>
+  <strong>Assignment:</strong> 1</p>
+
+  <h3>🔹 Introduction</h3>
+  <p>
+    This project explores how misconfigurations in AWS IAM can lead to privilege escalation 
+    attacks, using the <em>iam_privesc_by_rollback</em> scenario in CloudGoat. 
+    The exercise was conducted in a controlled AWS environment using Kali Linux, with the 
+    IAM user <strong>Raynor</strong> as the starting point. The goal was to demonstrate how 
+    attackers can exploit <code>SetDefaultPolicyVersion</code> permissions to escalate from 
+    limited user access to full administrative control.
+  </p>
+
+  <h3>🔹 Task 1: Initial Setup</h3>
+  <p>
+    Prepared a Kali Linux VM with AWS CLI installed and configured using personal AWS credentials. 
+    Verified setup with <code>aws sts get-caller-identity</code> and ensured CloudGoat requirements 
+    (Terraform, jq) were installed. This laid the foundation for deploying the vulnerable environment.
+  </p>
+
+  <h3>🔹 Task 2: Accessing CloudGoat</h3>
+  <p>
+    Cloned the CloudGoat repository from GitHub and configured it with AWS credentials. 
+    Verified functionality with <code>cloudgoat help</code> and <code>cloudgoat list</code>, 
+    confirming readiness to deploy scenarios.
+  </p>
+
+  <h3>🔹 Task 3: Understanding the Scenario</h3>
+  <p>
+    The scenario deployed an IAM user <strong>Raynor</strong> with a policy containing 
+    multiple versions. The exploit path relied on the <code>SetDefaultPolicyVersion</code> 
+    permission, allowing rollback to an older version (v3) that granted full admin access.
+  </p>
+
+  <h3>🔹 Task 4: Starting the Scenario</h3>
+  <p>
+    Deployed the <em>iam_privesc_by_rollback</em> scenario. Configured AWS CLI with Raynor’s 
+    credentials and verified limited access by running IAM commands. At this stage, Raynor only 
+    had restricted permissions.
+  </p>
+
+  <h3>🔹 Task 5: Exploring Initial Configuration</h3>
+  <p>
+    Listed attached policies and their versions using 
+    <code>aws iam list-policy-versions</code>. Found that the default policy was restrictive 
+    but older versions contained admin-level privileges. 
+    Confirmed that Raynor had <code>iam:SetDefaultPolicyVersion</code> rights.
+  </p>
+
+  <h3>🔹 Task 6: Performing Privilege Escalation</h3>
+  <p>
+    Executed privilege escalation by rolling back to <strong>version 3</strong> of the policy 
+    with <code>aws iam set-default-policy-version</code>. This successfully elevated Raynor 
+    from limited permissions to full administrator rights.
+  </p>
+
+  <h3>🔹 Task 7: Verification</h3>
+  <p>
+    Verified escalation by performing admin-level actions, such as creating a new IAM user 
+    (<em>test-admin</em>), listing roles, and attaching policies. Demonstrated stealth by reverting 
+    to the restrictive policy version afterward, simulating attacker cover-up tactics.
+  </p>
+
+  <h3>🔹 Task 8: Reflection and Analysis</h3>
+  <p>
+    Highlighted that allowing users to set default policy versions poses a severe security risk, 
+    especially when older permissive versions exist. Emphasized the need for least privilege, 
+    strict policy version management, logging, and monitoring of IAM changes to prevent misuse.
+  </p>
+
+  <h3>🔹 Conclusion</h3>
+  <p>
+    The scenario showed how IAM misconfigurations can enable privilege escalation and stealthy 
+    exploitation. Key lessons included the importance of removing outdated policy versions, 
+    enforcing least privilege, and auditing IAM activities to secure AWS environments against 
+    rollback-based attacks.
+  </p>
+
+  <p>👉 <a href="assets/pdf/lab/cloudgoat-iam-privesc.pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p>
+</section>
+
+          <section>
+  <h3>🔹 Project: AWS Flaws – Identifying and Exploiting Misconfigurations</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    This lab explored common <strong>security flaws and misconfigurations in AWS environments</strong>, focusing on how attackers exploit weak policies, overly permissive IAM roles, and improper access controls. The goal was to analyze insecure setups, simulate exploitation, and highlight how such vulnerabilities can be mitigated through best practices.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Reviewed <strong>AWS IAM policies</strong> to identify overly permissive roles that could allow privilege escalation.</li>
+    <li>Simulated exploitation of <strong>S3 bucket misconfigurations</strong>, such as public access and weak permissions.</li>
+    <li>Explored <strong>EC2 instance metadata service (IMDS)</strong) to understand how leaked credentials could lead to lateral movement.</li>
+    <li>Analyzed CloudTrail logs for visibility gaps where misconfigurations allowed unnoticed activity.</li>
+    <li>Tested weak <strong>security group rules</strong> that left ports unnecessarily open to the internet.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>Confirmed privilege escalation paths by exploiting weak IAM roles.</li>
+    <li>Verified that misconfigured S3 buckets exposed sensitive data until corrected.</li>
+    <li>Observed CloudTrail logs to validate detection gaps and applied improved monitoring rules.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    This project highlighted the real-world risks of <strong>misconfigured IAM, storage, and networking</strong> in AWS. By simulating attacker behavior, I demonstrated how flaws can be exploited to gain unauthorized access. The exercise reinforced the importance of <strong>least privilege, secure configurations, and robust monitoring</strong> in AWS cloud security.
+  </p>
+
+  <p>👉 <a href="assets/pdf/lab/aws-flaws.pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p>
+</section>
+
+<section>
+  <h3>🔹 Project: Azure Firewall – Securing Network Traffic</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    This lab focused on deploying and configuring <strong>Azure Firewall</strong> as a centralized security control to monitor, filter, and protect network traffic across Azure virtual networks. It demonstrated how Azure Firewall enforces policies at scale, controls traffic flows, and integrates with logging for security visibility.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Deployed <strong>Azure Firewall</strong> into a hub virtual network to serve as a centralized control point.</li>
+    <li>Configured <strong>application rules</strong> to restrict web traffic to approved domains.</li>
+    <li>Implemented <strong>network rules</strong> to allow or deny traffic based on IP, port, and protocol.</li>
+    <li>Enabled <strong>Threat Intelligence-based filtering</strong> to block connections to known malicious IPs/domains.</li>
+    <li>Integrated <strong>Azure Firewall logs</strong> with Log Analytics for monitoring and auditing.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>Tested blocked outbound traffic to unauthorized websites.</li>
+    <li>Confirmed that inbound and outbound rules worked as expected for specific services.</li>
+    <li>Verified alerts and traffic logs within Azure Monitor and Log Analytics.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    By configuring Azure Firewall, I enforced <strong>centralized network security policies</strong> across the cloud environment. This lab provided practical experience in <strong>rule configuration, traffic filtering, and monitoring</strong>, demonstrating how Azure Firewall reduces the attack surface and strengthens compliance.
+  </p>
+
+  <p>👉 <a href="assets/pdf/lab/azure-firewall.pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p>
+</section>
+
+<section>
+  <h3>🔹 Project: CloudGoat – Vulnerable Lambda Scenario</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    This lab used <strong>CloudGoat</strong>, a deliberately vulnerable AWS environment, to explore a <strong>Lambda privilege escalation scenario</strong>. The focus was on exploiting insecure IAM roles assigned to Lambda functions and understanding how attackers can leverage weak configurations for unauthorized access.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Deployed the vulnerable <strong>CloudGoat Lambda scenario</strong> into AWS.</li>
+    <li>Enumerated IAM roles attached to the Lambda execution function.</li>
+    <li>Discovered excessive privileges allowing Lambda to assume roles with elevated access.</li>
+    <li>Exploited misconfigurations to escalate privileges and access sensitive AWS resources.</li>
+    <li>Reviewed remediation strategies to restrict permissions and follow least-privilege principles.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>Successfully executed privilege escalation from the Lambda function role.</li>
+    <li>Verified that sensitive resources (e.g., S3, DynamoDB) were accessible post-exploitation.</li>
+    <li>Confirmed that corrected IAM policies prevented the same escalation path.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    This project demonstrated how <strong>over-permissive Lambda IAM roles</strong> can create serious security risks. By exploiting the vulnerable configuration, I gained insights into <strong>real-world attack paths</strong> in serverless architectures and learned how proper IAM hardening and monitoring can mitigate such risks.
+  </p>
+
+  <p>👉 <a href="assets/pdf/lab/cloudgoat-vulnerable-lambda.pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p>
+</section>
+
+<section>
+  <h3>🔹 Project: Exploring Cloud Security Risk with CloudGoat Lambda Scenario</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    In this extended lab, I examined the <strong>wider cloud security risks</strong> exposed through the CloudGoat Lambda scenario. Beyond privilege escalation, the focus was on how attackers pivot, escalate further, and exfiltrate data once initial access is obtained via a misconfigured Lambda function.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Mapped the <strong>attack surface</strong> of the Lambda function and related IAM policies.</li>
+    <li>Demonstrated lateral movement into <strong>S3 buckets</strong> and database services once elevated access was gained.</li>
+    <li>Explored the possibility of <strong>backdooring Lambda code</strong> to persist access.</li>
+    <li>Analyzed CloudTrail logs to determine detection challenges and opportunities for improved monitoring.</li>
+    <li>Documented mitigation strategies including <strong>IAM hardening, monitoring enhancements, and least-privilege enforcement</strong>.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>Executed attacks showing data access and persistence mechanisms.</li>
+    <li>Confirmed that logging gaps delayed detection of malicious Lambda actions.</li>
+    <li>Validated that remediation steps (policy tightening, CloudWatch alerts) reduced risk exposure.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    This lab highlighted how a single <strong>misconfigured Lambda function</strong> could compromise an entire AWS environment. By exploring broader attack paths, I gained experience in identifying systemic risks and implementing <strong>defense-in-depth strategies</strong> to strengthen cloud-native application security.
+  </p>
+
+  <p>👉 <a href="assets/pdf/lab/cloudgoat-lambda-scenario.pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p>
+</section>
+
+<section>
+  <h3>🔹 Project: Microsoft Defender for DevOps – Securing the CI/CD Pipeline</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    This lab focused on securing software supply chains by implementing <strong>Microsoft Defender for DevOps</strong>. The goal was to integrate security checks into CI/CD pipelines, detect insecure configurations, and enforce best practices to protect against DevOps-related risks.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Integrated <strong>Microsoft Defender for DevOps</strong> with GitHub repositories.</li>
+    <li>Enabled scanning of <strong>IaC templates</strong> (ARM, Terraform) for misconfigurations.</li>
+    <li>Configured security policies to block deployments with high-risk vulnerabilities.</li>
+    <li>Linked pipeline alerts into <strong>Microsoft Defender for Cloud</strong> for centralized monitoring.</li>
+    <li>Tested real-world scenarios such as committing an exposed secret into a repository and observing detection.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>Confirmed that insecure commits triggered alerts in Defender for DevOps.</li>
+    <li>Verified that IaC scanning flagged misconfigured templates before deployment.</li>
+    <li>Validated incident reporting in Defender for Cloud with complete audit logs.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    This project demonstrated the importance of <strong>integrating security into CI/CD pipelines</strong>. With Microsoft Defender for DevOps, I implemented <strong>shift-left security</strong>, ensuring vulnerabilities were detected early in the development cycle. The lab emphasized the role of security automation in modern DevOps practices.
+  </p>
+
+  <p>👉 <a href="assets/pdf/lab/microsoft-defender-devops.pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p>
+</section>
 
         <article id="contact">
           <h2 class="major">Contact</h2>
