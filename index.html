@@ -1,11 +1,24 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Rene Oluoch - Communications & Computer Networks, Network Security Profesional</title>
+    <title>Rene Oluoch - Communications & Computer Networks, Network Security Professional</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.312/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.312/pdf.worker.min.js"></script>
+
+    <style>
+      .pdf-viewer {
+        width: 100%;
+        height: 600px; /* adjust height as needed */
+        border: 1px solid #ccc;
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body class="is-preload">
 
@@ -367,13 +380,12 @@ This lab deepened my understanding of web protocols and practical skills in cons
 
       <!-- Footer -->
       <footer id="footer">
-        <p class="copyright">&copy; Thank you for visiting! Feel free to explore my work, download full lab reports, and connect with me.
-
-© 2025 Rene Oluoch. <a href="https://html5up.net"></a></p>
+        <p class="copyright">&copy; Thank you for visiting! Feel free to explore my work, download full lab reports, and connect with me. © 2025 Rene Oluoch. <a href="https://html5up.net"></a></p>
       </footer>
 
     </div>
-![Visitor Count](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Freneoluoch.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=visits&edge_flat=false)
+
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Freneoluoch.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=visits&edge_flat=false" alt="Visitor Count">
 
     <!-- BG -->
     <div id="bg"></div>
@@ -384,6 +396,30 @@ This lab deepened my understanding of web protocols and practical skills in cons
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- PDF.js auto-embed -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const pdfLinks = document.querySelectorAll('a[href$=".pdf"]');
+
+        pdfLinks.forEach(link => {
+          const url = link.href;
+
+          // Create iframe container
+          const iframe = document.createElement('iframe');
+          iframe.classList.add('pdf-viewer');
+
+          // Embed PDF.js viewer in view-only mode
+          iframe.src = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(url)}#toolbar=0&navpanes=0&scrollbar=1`;
+
+          // Disable right-click
+          iframe.addEventListener('contextmenu', e => e.preventDefault());
+
+          // Replace original link with iframe
+          link.parentNode.replaceChild(iframe, link);
+        });
+      });
+    </script>
 
   </body>
 </html>
