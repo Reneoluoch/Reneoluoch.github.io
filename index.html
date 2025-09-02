@@ -794,6 +794,58 @@ This lab deepened my understanding of web protocols and practical skills in cons
     Download Full Lab Report (PDF)</a></p>
 </section>
 
+          <section>
+  <h3>🔹 Project: Network Security Groups (NSGs) and Application Security Groups (ASGs)</h3>
+  <p><strong>Summary</strong></p>
+  <p>
+    In this lab, I implemented <strong>segmented network security</strong> in Azure by combining <strong>Network Security Groups (NSGs)</strong> and 
+    <strong>Application Security Groups (ASGs)</strong>. The focus was to control access to different server roles—Web Servers and Management Servers—using tailored inbound rules while maintaining centralized management.
+  </p>
+
+  <p><strong>Detailed Activities:</strong></p>
+  <ul>
+    <li>Created a <strong>virtual network</strong> named <em>myVirtualNetwork</em> with a single subnet in East US region for hosting web and management servers.</li>
+    <li>Provisioned <strong>Application Security Groups</strong>—<em>myAsgWebServers</em> and <em>myAsgMgmtServers</em>—to logically group VMs by role.</li>
+    <li>Created a <strong>Network Security Group</strong> <em>myNsg</em> and associated it with the subnet to enforce traffic rules at the network layer.</li>
+    <li>Defined <strong>inbound NSG rules</strong>:
+      <ul>
+        <li>Allow HTTP/HTTPS traffic to Web Servers ASG.</li>
+        <li>Allow RDP access only to Management Servers ASG.</li>
+      </ul>
+    </li>
+    <li>Deployed virtual machines:
+      <ul>
+        <li><em>myVmWeb</em> as the Web Server.</li>
+        <li><em>myVMMgmt</em> as the Management Server.</li>
+      </ul>
+    </li>
+    <li>Associated each VM’s network interface to its respective ASG to apply NSG rules effectively.</li>
+    <li>Tested network filtering:
+      <ul>
+        <li>Verified RDP access to the management server.</li>
+        <li>Confirmed HTTP traffic reached the web server while RDP was blocked.</li>
+      </ul>
+    </li>
+    <li>Cleaned up all Azure resources via PowerShell to prevent unnecessary subscription costs.</li>
+  </ul>
+
+  <p><strong>Validation:</strong></p>
+  <ul>
+    <li>RDP successfully connected to the management server only.</li>
+    <li>HTTP/HTTPS traffic successfully reached the web server.</li>
+    <li>Confirmed NSG rules applied as intended by testing traffic flows between ASGs.</li>
+  </ul>
+
+  <p><strong>Outcome:</strong></p>
+  <p>
+    Successfully demonstrated how NSGs and ASGs provide <strong>granular, role-based network security</strong> in Azure. The lab reinforced best practices for segmenting resources, enforcing least privilege, and dynamically managing traffic access based on logical groupings rather than static IPs.
+  </p>
+
+  <p>👉 <a href="assets/pdf/lab/azure-nsg-asg.pdf" target="_blank" rel="noopener">
+    Download Full Lab Report (PDF)</a></p>
+</section>
+
+
         <article id="contact">
           <h2 class="major">Contact</h2>
           <ul class="icons">
