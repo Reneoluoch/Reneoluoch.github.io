@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+e<!DOCTYPE HTML>
 <html>
   <head>
     <title>Rene Oluoch - Communications & Computer Networks, Network Security Professional</title>
@@ -144,8 +144,8 @@ pdfjsLib.getDocument(url).promise.then(pdf => {
       <h3>Certifications</h3>
       <ul>
         <li>Cisco Certified Network Associate (CCNA) – In Progress</li>
-        <li>Cyber Shujaa (Network and Cloud Security) – In Progress</li>
-        <li>IBM SkillsBuild – Artificial Intelligence Fundamentals (June 2024 – Dec 2024)</li>
+        <li>Cyber Shujaa (Network and Cloud Security) – July 2025 - August 2025</li>
+        <li>IBM SkillsBuild – Artificial Intelligence Fundamentals (June 2024 – Sept 2024)</li>
       </ul>
     </section>
 
@@ -174,199 +174,21 @@ pdfjsLib.getDocument(url).promise.then(pdf => {
  
         </article>
 
-        <!-- Projects -->
-        <article id="networksecurityprojects">
-          <h2 class="major">Projects</h2>
-          <section>
-           <h3>🔹 Project: Basic Router and Switch Network Configuration</h3>
-
-<p><strong>Summary</strong></p>
-<p>
-In this lab-based project, I built and configured a simple network consisting of a router, a switch, and two PCs. 
-The objective was to establish IPv4 and IPv6 communication, apply basic security settings,
- and validate connectivity across devices using Cisco IOS CLI.
-</p>
-
-<p><strong>Key Activities:</strong></p>
-<ul>
-  <li>Designed a small topology using a Cisco 4321 router, Catalyst 2960 switch, and two PCs</li>
-  <li>Configured static IP addresses, IPv6 addresses, and default gateways on all devices</li>
-  <li>Enabled and verified router interfaces (G0/0/0 and G0/0/1) using <code>no shutdown</code> and interface descriptions</li>
-  <li>Applied essential security practices such as encrypted passwords and MOTD banners</li>
-  <li>Configured VLAN 1 on the switch for remote management and set the default gateway</li>
-  <li>Tested connectivity via <code>ping</code> and verified routes using <code>show ip route</code> and <code>show ipv6 route</code></li>
-  <li>Analyzed interface configurations and status to confirm proper setup</li>
-</ul>
-
-<p><strong>Tools & Technologies:</strong></p>
-<ul>
-  <li>Cisco IOS CLI</li>
-  <li>Cisco Packet Tracer / GNS3</li>
-  <li>IPv4 & IPv6 addressing</li>
-  <li>Router & switch configuration</li>
-  <li>Basic network security (password encryption, banners)</li>
-</ul>
-
-<p><strong>Outcome:</strong></p>
-<p>
-Achieved full Layer 3 connectivity between subnets. Developed hands-on proficiency with CLI-based network configuration, interface management, routing verification, and troubleshooting. Reinforced understanding of IP addressing, device initialization, and error diagnosis.
-</p>
-
-
-<p>👉 <a href="assets/pdf/Router-Switch-Network-Lab.pdf" target="_blank" rel="noopener">Download Full Lab Report (PDF)</a></p>
-
-          </section>
-          <section>
-            
-            <h3>🔹 Project: TryHackMe - DNS In Detail</h3>
-
-<p><strong>Summary</strong></p>
-<p>
-In this comprehensive learning module on TryHackMe, I explored the fundamentals and practical aspects of the Domain Name System (DNS). 
-I gained deep insights into how DNS translates user-friendly domain names into IP addresses, enabling seamless internet navigation and communication.
-</p>
-
-<p><strong>Key Concepts Covered:</strong></p>
-<ul>
-  <li>DNS architecture including domain hierarchy, Top-Level Domains (TLDs), Second-Level Domains (SLDs), and subdomains</li>
-  <li>Various DNS record types such as A, AAAA, CNAME, MX, and TXT, and their specific roles in web addressing, email routing, and authentication</li>
-  <li>Detailed DNS resolution process involving local caches, recursive resolvers, root servers, TLD servers, and authoritative name servers</li>
-</ul>
-
-<p><strong>Practical Experience:</strong></p>
-<ul>
-  <li>Performed real DNS queries using nslookup-like tools in an interactive virtual environment</li>
-  <li>Executed queries for CNAME, TXT, MX, and A records to verify DNS functionality and interpret results</li>
-  <li>Reinforced understanding of DNS's critical role in network communication and troubleshooting</li>
-</ul>
-
-<p><strong>Outcome:</strong></p>
-<p>
-This project enhanced my theoretical knowledge and practical skills in DNS operations, empowering me with the ability to analyze domain structures, understand record types, and troubleshoot DNS-related issues effectively. It serves as a foundation for network diagnostics, security, and systems administration.
-</p>
-<p>👉 <a href="assets/pdf/DNS in Details.pdf" target="_blank" rel="noopener">Download Full Lab Report (PDF)</a></p>
-
-
-            <h3>🔹 Project: VLANs and Secure Switch Configuration</h3>
-
-<p><strong>Summary</strong></p>
-<p>
-In this hands-on lab assignment, I designed and implemented a secure, segmented network using Cisco routers and switches. The focus was on configuring VLANs, inter-VLAN routing, trunking protocols, and implementing Layer 2 security features. This project simulated an enterprise environment where I applied network design and security best practices.
-</p>
-
-<p><strong>Key Concepts Covered:</strong></p>
-<ul>
-  <li>Created VLANs including Management (VLAN 10), Native (VLAN 333), and Parking Lot (VLAN 999) for logical network segmentation</li>
-  <li>Configured Switched Virtual Interfaces (SVIs) to enable remote management over VLAN 10</li>
-  <li>Implemented 802.1Q trunking with static trunk ports and secure native VLAN assignment</li>
-</ul>
-
-<p><strong>Practical Experience:</strong></p>
-<ul>
-  <li>Configured access ports for end devices and verified VLAN membership and IP connectivity</li>
-  <li>Secured unused switchports by assigning them to VLAN 999 and shutting them down</li>
-  <li>Enabled port security with sticky MAC learning, DHCP snooping, and BPDU Guard to protect the switch from common Layer 2 attacks</li>
-</ul>
-
-<p><strong>Outcome:</strong></p>
-<p>
-This lab deepened my understanding of VLAN architecture and secure network segmentation. I gained practical experience configuring trunk links, securing switchports, and verifying end-to-end connectivity. These skills are essential for managing scalable, secure networks in real-world enterprise environments.
-</p>
-<p>👉 <a href="assets/pdf/Switch sercurity.pdf" target="_blank" rel="noopener">Download Full Lab Report (PDF)</a></p>
- <h3>🔹 Project: Packet Tracer – TCP/IP & OSI Models in Action</h3>
-
-<p><strong>Summary</strong></p>
-<p>
-In this immersive assignment, I utilized Cisco Packet Tracer to dissect how data flows through the OSI and TCP/IP models during web and DNS communications. The lab provided both a theoretical and practical understanding of network packet behavior across layers, encapsulation processes, protocol interactions, and real-time packet analysis. Observing the detailed journey of HTTP requests and DNS resolutions significantly deepened my grasp of fundamental networking concepts.
-</p>
-
-<p><strong>Key Concepts Covered:</strong></p>
-<ul>
-  <li>Practical analysis of OSI and TCP/IP model layers using simulation tools</li>
-  <li>Detailed inspection of encapsulated HTTP requests, DNS lookups, and ARP queries</li>
-  <li>Understanding port numbers, MAC address resolution, IP packet structure, and TCP connection states</li>
-</ul>
-
-<p><strong>Practical Experience:</strong></p>
-<ul>
-  <li>Used Packet Tracer's Simulation Mode to capture and analyze HTTP and DNS traffic flows</li>
-  <li>Identified data behavior across OSI layers—from Layer 7 (Application) to Layer 1 (Physical)</li>
-  <li>Interpreted the TCP three-way handshake and termination process, including ESTABLISHED and CLOSED states</li>
-  <li>Resolved DNS queries and verified server response IP addresses and port behavior (HTTP on port 80, DNS on port 53)</li>
-</ul>
-
-<p><strong>Outcome:</strong></p>
-<p>
-This project sharpened my practical networking skills, reinforcing theoretical knowledge with packet-level insights. It empowered me to understand and explain the mechanics of web and DNS traffic handling, identify encapsulation processes across each OSI layer, and utilize packet analysis tools effectively. This assignment marked a foundational step toward mastering network diagnostics, protocol behavior, and secure, efficient network communication.
-</p>
-<p>👉 <a href="assets/pdf/lab/TCPip Osi.pdf"target="_blank" rel="noopener">Download Full Lab Report (PDF)</a></p>
-          </section>
-          <section>
-           <h3>🔹 Project: Wireshark – Analyzing Local and Remote Network Traffic</h3>
-
-<p><strong>Summary</strong></p>
-<p>
-This assignment used <strong>Wireshark</strong> to explore network traffic with a focus on <strong>ICMP packets</strong>, ARP behavior, and the relationship between Layer 2 and Layer 3 in local and remote scenarios. Through targeted ping commands and traffic analysis, I gained valuable insights into how packets are constructed, transmitted, and interpreted across networks. This hands-on lab provided a clear view of how devices communicate within the LAN and how data travels across the internet via IP routing.
-</p>
-
-<p><strong>Key Concepts Covered:</strong></p>
-<ul>
-  <li>ICMP traffic analysis in local and remote network communication</li>
-  <li>ARP (Address Resolution Protocol) and MAC resolution on local networks</li>
-  <li>TTL (Time to Live) in IP packets and hop count interpretation</li>
-  <li>Ethernet frame structures and encapsulation behavior within LANs</li>
-  <li>Wireshark as a tool for live traffic inspection and protocol dissection</li>
-</ul>
-
-<p><strong>Practical Experience:</strong></p>
-<ul>
-  <li>Used <code>ipconfig</code> and <code>arp -a</code> commands to retrieve local IP and MAC details</li>
-  <li>Captured and analyzed ICMP Echo Requests/Replies to both the default gateway and external websites (Google, Cisco, Yahoo)</li>
-  <li>Observed how ARP resolves MAC addresses only within local networks</li>
-  <li>Learned that Ethernet frames for remote communication use the gateway's MAC, not the final destination's</li>
-  <li>Inspected TTL values to identify the number of hops between source and destination</li>
-</ul>
-
-<p><strong>Outcome:</strong></p>
-<p>
-This lab enhanced my technical skills in network traffic analysis, highlighting the significance of ICMP, ARP, and IP in day-to-day communication. It demonstrated the layer-specific roles of protocols within the OSI model and clarified how Ethernet and IP function differently in local and remote scenarios. The lab also validated the importance of tools like Wireshark for diagnostics and protocol study, making this a vital step toward deeper proficiency in network operations and security analysis.
-</p>
-<p>👉 <a href="assets/pdf/lab/Use Wireshark to Examine Network Traffic lab challenge.pdf" target="_blank" rel="noopener">Download Full Lab Report (PDF)</a></p>
-
-          </section>
-          <section><h3>🔹 Project: Web Requests – Understanding HTTP/HTTPS Communication</h3>
-
-<p><strong>Summary</strong></p>
-<p>
-This assignment explored the core principles of <strong>web communication</strong> using <strong>HTTP and HTTPS</strong> protocols. I studied how clients and servers exchange structured requests and responses, examined the anatomy of URLs, and learned to interpret HTTP status codes and methods like GET, POST, PUT, and DELETE. Hands-on practice with tools like <code>cURL</code> and browser DevTools allowed me to craft, send, and analyze requests, gaining insight into how web applications handle data and authentication.
-</p>
-
-<p><strong>Key Concepts Covered:</strong></p>
-<ul>
-  <li>HTTP request and response structure and flow</li>
-  <li>Differences between HTTP and HTTPS, including TLS encryption and secure communication</li>
-  <li>HTTP headers and their roles in security, content negotiation, and session management</li>
-  <li>Common HTTP methods (GET, POST, PUT, DELETE) and how they relate to CRUD operations</li>
-  <li>Interacting with APIs using RESTful principles and JSON payloads</li>
-  <li>Authentication techniques such as HTTP Basic Auth and cookie handling</li>
-</ul>
-
-<p><strong>Practical Experience:</strong></p>
-<ul>
-  <li>Used <code>cURL</code> commands to send and inspect HTTP/HTTPS requests and responses</li>
-  <li>Explored request headers, response headers, and status codes via browser DevTools</li>
-  <li>Authenticated to protected endpoints using Basic Authentication with credentials in headers and URLs</li>
-  <li>Manipulated GET parameters and POST JSON payloads to interact with web services and search functions</li>
-  <li>Performed full CRUD operations on an API endpoint using REST methods and JSON formatting</li>
-</ul>
-
-<p><strong>Outcome:</strong></p>
-<p>
-This lab deepened my understanding of web protocols and practical skills in constructing, analyzing, and manipulating HTTP traffic. I learned how encryption secures data in transit, how APIs operate through RESTful conventions, and how authentication and headers govern access and communication. These skills are foundational for web application security testing, automation, and troubleshooting.
-</p>
-<p>👉 <a href="assets/pdf/lab/web requests.pdf" target="_blank" rel="noopener">Download Full Lab Report (PDF)</a></p>
-</section>
+ <section> <h3>🔹 Project: Basic Router and Switch Network Configuration</h3> <p><strong>Summary</strong></p> <p>This lab focused on designing and configuring a small network using a <strong>Cisco 4321 router</strong>, a <strong>Catalyst 2960 switch</strong>, and two PCs. The objective was to establish IPv4 and IPv6 connectivity, apply basic security measures, and validate communication across all devices using the Cisco IOS CLI.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>IPv4 and IPv6 addressing and subnetting</li> <li>Static IP configuration and default gateway setup</li> <li>Router interface management (`no shutdown`, descriptions)</li> <li>Basic network security (encrypted passwords, MOTD banners)</li> <li>VLAN configuration for remote switch management</li> <li>Connectivity testing using `ping` and route verification</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Designed network topology with one router, one switch, and two PCs</li> <li>Configured IP addresses and IPv6 addresses on PCs and router interfaces</li> <li>Enabled router interfaces and added descriptive labels</li> <li>Configured VLAN 1 on the switch for remote management and set default gateway</li> <li>Applied encrypted passwords and MOTD banners for basic security</li> <li>Tested connectivity and verified routes using CLI commands</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Verified Layer 3 connectivity between all devices</li> <li>Confirmed correct routing table entries and interface functionality</li> <li>Checked applied security settings were active</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>This lab reinforced hands-on skills in CLI-based network configuration, IP addressing, interface management, routing verification, and basic network security. Achieved full connectivity and functional network setup.</p> <p>👉 <a href="assets/pdf/Router-Switch-Network-Lab.pdf" target="_blank">Download Full Lab Report (PDF)</a></p>  </section>
+<section> <h3>🔹 Project: TryHackMe – DNS in Detail</h3> <p><strong>Summary</strong></p> <p>This project explored the fundamentals and practical operations of the <strong>Domain Name System (DNS)</strong> using TryHackMe. The focus was on understanding how domain names resolve to IP addresses and applying this knowledge through hands-on DNS queries in a virtual lab environment.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>DNS hierarchy: Top-Level Domains (TLDs), Second-Level Domains (SLDs), and subdomains</li> <li>DNS record types: A, AAAA, CNAME, MX, TXT</li> <li>DNS resolution process: local caches, recursive resolvers, root/TLD/authoritative servers</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Performed interactive DNS queries to retrieve A, AAAA, MX, CNAME, and TXT records</li> <li>Analyzed DNS query responses and verified IP resolution</li> <li>Observed caching behavior and authoritative server responses</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Verified successful DNS resolution for various domain names</li> <li>Confirmed correct record type responses and IP address mapping</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>Enhanced understanding of DNS operations, record types, and resolution processes. Gained practical skills in querying, analyzing, and troubleshooting DNS in real-world scenarios.</p> <p>👉 <a href="assets/pdf/DNS in Details.pdf" target="_blank">Download Full Lab Report (PDF)</a></p> </section>
+<section> <h3>🔹 Project: VLANs and Secure Switch Configuration</h3> <p><strong>Summary</strong></p> <p>This lab focused on designing a segmented and secure network using <strong>Cisco switches and routers</strong>. VLANs were implemented for logical network segmentation, trunking protocols were configured, and Layer 2 security features were applied to simulate an enterprise environment.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>VLAN creation and segmentation (Management VLAN 10, Native VLAN 333, Parking Lot VLAN 999)</li> <li>Switched Virtual Interface (SVI) configuration for remote management</li> <li>802.1Q trunking and secure native VLAN assignment</li> <li>Layer 2 security: port security, DHCP snooping, BPDU Guard</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Created VLANs and configured SVIs on the switch</li> <li>Configured trunk ports and verified VLAN memberships</li> <li>Secured unused ports by placing them in VLAN 999 and shutting them down</li> <li>Enabled port security features including sticky MAC, DHCP snooping, and BPDU Guard</li> <li>Verified connectivity and VLAN functionality across the network</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Confirmed VLAN membership and trunk operation</li> <li>Verified end-to-end IP connectivity</li> <li>Tested security configurations for compliance and effectiveness</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>Gained hands-on experience in VLAN architecture, secure segmentation, trunking, and switch security. Developed practical skills necessary for managing enterprise network environments.</p> <p>👉 <a href="assets/pdf/Switch sercurity.pdf" target="_blank">Download Full Lab Report (PDF)</a></p> </section>
+        <section> <h3>🔹 Project: Packet Tracer – TCP/IP & OSI Models in Action</h3> <p><strong>Summary</strong></p> <p>This lab examined the flow of data through the <strong>OSI and TCP/IP models</strong> using Cisco Packet Tracer. Students observed encapsulation, protocol interactions, and packet behavior during web and DNS communications, gaining both theoretical and practical insights into networking.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>OSI and TCP/IP model layers and their functions</li> <li>Encapsulation of HTTP, DNS, and ARP packets</li> <li>Port numbers, MAC addresses, IP packet structure, and TCP connection states</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Used Packet Tracer Simulation Mode to capture and analyze HTTP and DNS traffic</li> <li>Tracked packet behavior across OSI layers from Application to Physical</li> <li>Observed TCP three-way handshake and connection termination</li> <li>Resolved DNS queries and interpreted server responses and port usage</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Confirmed correct packet traversal across all OSI layers</li> <li>Verified DNS resolution and HTTP traffic encapsulation</li> <li>Analyzed TCP connections to ensure proper handshake and closure</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>Developed practical understanding of packet flow, encapsulation, and protocol interaction. Reinforced theoretical knowledge with hands-on packet analysis, preparing for advanced network diagnostics and troubleshooting.</p> <p>👉 <a href="assets/pdf/lab/TCPip Osi.pdf" target="_blank">Download Full Lab Report (PDF)</a></p> </section>
+<section> <h3>🔹 Project: Wireshark – Analyzing Local and Remote Network Traffic</h3> <p><strong>Summary</strong></p> <p>This assignment utilized <strong>Wireshark</strong> to capture and analyze local and remote network traffic. Focus was on ICMP, ARP, and understanding Layer 2 and Layer 3 interactions. Students explored packet construction, transmission, and interpretation, gaining insights into network communication and troubleshooting.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>ICMP packet analysis for local and remote networks</li> <li>ARP resolution and MAC address behavior</li> <li>TTL and hop count interpretation</li> <li>Ethernet frame structure and encapsulation</li> <li>Use of Wireshark for live traffic inspection</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Used `ipconfig` and `arp -a` to retrieve IP and MAC addresses</li> <li>Captured ICMP Echo Requests/Replies to gateways and external sites</li> <li>Observed ARP resolution only within local network segments</li> <li>Analyzed TTL values to determine packet hop counts</li> <li>Inspected Ethernet frames for local vs. remote communication</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Verified ICMP traffic between hosts and gateways</li> <li>Confirmed ARP resolution behavior</li> <li>Analyzed packet structures to validate encapsulation and routing</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>Enhanced skills in network traffic analysis and OSI layer interpretation. Gained practical experience in using Wireshark for diagnostics, ARP and ICMP understanding, and understanding local vs. remote network behaviors.</p> <p>👉 <a href="assets/pdf/lab/Use Wireshark to Examine Network Traffic lab challenge.pdf" target="_blank">Download Full Lab Report (PDF)</a></p> </section>
+<section> <h3>🔹 Project: Web Requests – Understanding HTTP/HTTPS Communication</h3> <p><strong>Summary</strong></p> <p>This lab explored <strong>web communication</strong> using HTTP and HTTPS. Students studied client-server interactions, request/response structures, headers, methods, and status codes. Hands-on practice with <code>cURL</code> and browser DevTools facilitated understanding of web traffic, APIs, and secure communication.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>HTTP request/response structure and flow</li> <li>Differences between HTTP and HTTPS, TLS encryption</li> <li>HTTP headers, methods (GET, POST, PUT, DELETE), and status codes</li> <li>API interactions with RESTful principles and JSON payloads</li> <li>Authentication: Basic Auth, cookies, and session management</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Used `cURL` and DevTools to inspect HTTP/HTTPS requests and responses</li> <li>Manipulated headers, cookies, GET parameters, and JSON payloads</li> <li>Performed CRUD operations on API endpoints</li> <li>Authenticated to endpoints and verified secure communications</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Confirmed correct request/response flow and status codes</li> <li>Verified secure transmission over HTTPS</li> <li>Tested API interactions and CRUD operations</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>Strengthened practical knowledge of web protocols, secure communication, API usage, and traffic analysis. Developed skills essential for web application testing, troubleshooting, and security verification.</p> <p>👉 <a href="assets/pdf/lab/web requests.pdf" target="_blank">Download Full Lab Report (PDF)</a></p> </section>
+        <section> <h3>🔹 Project: Introduction to Web Applications</h3> <p><strong>Summary</strong></p> <p>This module provided a comprehensive introduction to <strong>web applications</strong>, covering architecture, front-end and back-end components, development frameworks, APIs, and security vulnerabilities. The focus was on understanding functional and security aspects to foster a security-first mindset in development and penetration testing.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>Web application architecture: front-end vs. back-end, three-tier, client-server interactions</li> <li>Front-end technologies: HTML, CSS, JavaScript, and security implications</li> <li>Back-end systems: web servers, databases, frameworks, and APIs</li> <li>Common vulnerabilities: HTML Injection, XSS, CSRF, SQL Injection, command injection, broken authentication</li> <li>Public vulnerabilities and CVE scoring for prioritizing risk</li> <li>Secure development practices, input validation, and penetration testing strategies</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Explored web layouts and infrastructure models (single, multi-server, microservices, serverless)</li> <li>Practiced front-end coding, DOM manipulation, and URL encoding</li> <li>Analyzed front-end security issues: XSS, CSRF, sensitive data exposure</li> <li>Examined back-end servers, databases, frameworks, and APIs</li> <li>Reviewed public vulnerabilities and applied CVE scoring to assess threats</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Viewed page source to identify exposed sensitive data</li> <li>Injected HTML/JavaScript payloads to test vulnerabilities</li> <li>Simulated CSRF attacks to evaluate session manipulation risks</li> <li>Assessed back-end misconfigurations, database access flaws, and API vulnerabilities</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>Gained a holistic understanding of web application architecture, security vulnerabilities, and testing methodologies. Developed practical skills in securing applications, analyzing threats, and performing penetration tests in modern web environments.</p> <p>👉 <a href="assets/pdf/lab/Introduction-to-Web-Applications.pdf" target="_blank">Download Full Lab Report (PDF)</a></p> </section>
+<section> <h3>🔹  Project: L2 MAC Flooding & ARP Spoofing</h3> <p><strong>Summary</strong></p> <p>This lab explored <strong>Layer 2 attacks</strong>, focusing on MAC flooding, ARP spoofing, and Man-in-the-Middle (MITM) techniques. Using a dual-homed Linux host, students practiced network reconnaissance, interception, and packet manipulation with tools like <code>tcpdump</code>, <code>macof</code>, and <code>ettercap</code>. Emphasis was on understanding L2 vulnerabilities and implementing security controls.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>Layer 2 networking: MAC tables, ARP, dual-homed hosts</li> <li>Network discovery using Nmap and ping</li> <li>Passive sniffing with tcpdump and Wireshark</li> <li>MAC flooding to overwhelm switch tables</li> <li>ARP spoofing and MITM attacks</li> <li>Traffic manipulation using filters and payload injection</li> <li>Mitigation strategies: ARP validation, port security, network segmentation</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Accessed dual-homed Linux host via SSH with root privileges</li> <li>Mapped network interfaces, IPs, and active hosts</li> <li>Captured network traffic using tcpdump and analyzed via Wireshark</li> <li>Performed MAC flooding with macof and monitored switch behavior</li> <li>Executed ARP spoofing with ettercap and observed MITM results</li> <li>Manipulated packets with ettercap filters to simulate real-world attacks</li> <li>Confirmed root access and captured flags to demonstrate full system compromise</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Verified active hosts and services</li> <li>Observed traffic before and after MAC flooding</li> <li>Tested ARP spoofing and confirmed mitigation effectiveness</li> <li>Validated intercepted traffic and manipulated packets</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>Highlighted real-world impact of L2 attacks. Students learned how MAC flooding and ARP spoofing can compromise networks, and how traffic manipulation escalates risk. Reinforced importance of ARP inspection, port security, and vigilant monitoring for L2 defenses.</p> <p>👉 <a href="assets/pdf/lab/L2-MAC-Flooding.pdf" target="_blank">Download Full Lab Report (PDF)</a></p> </section>
+<section> <h3>🔹 Project: Configuring Site-to-Site VPNs</h3> <p><strong>Summary</strong></p> <p>This lab involved configuring a <strong>site-to-site IPsec VPN</strong> between two Cisco routers (R1 and R3). The exercise focused on encrypting LAN-to-LAN traffic triggered by “interesting traffic” defined in ACLs. Students configured IKE phases, crypto maps, and verified tunnel operation, gaining practical VPN deployment experience.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>IPsec VPN setup and traffic encryption</li> <li>Interesting vs. uninteresting traffic triggering encryption</li> <li>IKE Phase 1 and Phase 2 configuration (AES, SHA-HMAC, DH groups)</li> <li>Crypto map application to outgoing interfaces</li> <li>Verification using `show crypto ipsec sa` and ping tests</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Enabled securityk9 features on routers</li> <li>Defined interesting traffic with ACLs</li> <li>Configured IKE Phase 1 and Phase 2 policies</li> <li>Created and applied crypto maps to interfaces</li> <li>Tested connectivity within LANs and across VPN tunnel</li> <li>Monitored encrypted/decrypted packets and verified selective tunnel activation</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Confirmed tunnel encryption for interesting traffic</li> <li>Verified uninteresting traffic bypassed encryption</li> <li>Observed end-to-end connectivity and correct packet handling</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>Developed hands-on skills in IPsec VPN configuration, IKE phases, and crypto map management. Gained practical understanding of secure tunnel deployment, traffic encryption, and monitoring in enterprise networks.</p> <p>👉 <a href="assets/pdf/lab/Packet-Tracer–Configuring-VPNs.pdf" target="_blank">Download Full Lab Report (PDF)</a></p> </section>
+<section> <h3>🔹  Project: Packet Tracer WLAN Configuration</h3> <p><strong>Summary</strong></p> <p>This lab focused on designing, configuring, and securing <strong>wireless LANs (WLANs)</strong> in home and enterprise environments using Cisco Packet Tracer. Students implemented DHCP, WLAN security, RADIUS authentication, VLAN interfaces, SNMP monitoring, and tested connectivity across multiple devices.</p> <p><strong>Key Concepts Covered:</strong></p> <ul> <li>Home WLAN: DHCP, SSID setup, WPA2-Personal security</li> <li>Enterprise WLAN: VLAN interfaces, WLC configuration, multiple WLANs, FlexConnect</li> <li>Security integration: WPA2-Enterprise, RADIUS authentication, password management</li> <li>Network monitoring via SNMP</li> <li>Client connectivity verification and troubleshooting</li> </ul> <p><strong>Detailed Activities / Steps:</strong></p> <ul> <li>Configured home router LAN IP, DHCP scope, and WLAN with WPA2-PSK</li> <li>Connected client devices and verified connectivity</li> <li>Set up enterprise WLC interfaces and VLANs</li> <li>Configured RADIUS for 802.1X authentication and SNMP monitoring</li> <li>Created WLANs with FlexConnect and ensured client connectivity</li> <li>Tested end-to-end connectivity with ping and web access</li> </ul> <p><strong>Validation / Testing:</strong></p> <ul> <li>Confirmed DHCP IP allocation to devices</li> <li>Verified WLAN authentication and RADIUS integration</li> <li>Tested connectivity across VLANs and WLANs</li> </ul> <p><strong>Outcome / Lessons Learned:</strong></p> <p>Gained practical skills in secure WLAN design, enterprise WLC management, VLAN integration, RADIUS authentication, and troubleshooting. Learned importance of centralized management, proper security protocols, and connectivity verification.</p> <p>👉 <a href="assets/pdf/lab/Packet-Tracer-WLAN-configuration.pdf" target="_blank">Download Full Lab Report (PDF)</a></p> </section>
+     
+         
+          
         </article>
+    
 
          
 
